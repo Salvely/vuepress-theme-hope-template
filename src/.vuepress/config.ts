@@ -1,6 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import { getDirname, path } from "vuepress/utils";
-import { viteBundler } from "@vuepress/bundler-vite";
+import { viteBundler } from '@vuepress/bundler-vite'
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 // import { ohmylive2dPlugin } from "vuepress-plugin-oh-my-live2d";
 import {
   canvasPlugin,
@@ -8,7 +9,7 @@ import {
 } from "./plugins/vuepress-plugin-canvas";
 import { live2DAssistPlugin } from "./plugins/vuepress-plugin-live2DAssist";
 import { gradientCoverPlugin } from "./plugins/vuepress-plugin-gradient-cover";
-import theme from "./theme2.js";
+import theme from "./theme.js";
 import { popperPlugin } from "./plugins/vuepress-plugin-popper";
 import { PopperShape } from "@moefy-canvas/theme-popper";
 import { hitokotoPlugin } from "./plugins/vuepress-plugin-hitokoto";
@@ -19,33 +20,25 @@ import metingPlugin from "vuepress-plugin-meting2";
 const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
   base: "/",
+  lang: "zh-CN",
+  head: [["meta", { name: "referrer", content: "no-referrer-when-downgrade" }]],
   locales: {
     "/": {
-      lang: "en-US",
-      title: "Blog Demo",
-      description: "A blog demo for vuepress-theme-hope",
-    },
-    "/zh/": {
       lang: "zh-CN",
-      title: "博客演示",
-      description: "vuepress-theme-hope 的博客演示",
+      title: "TODO's Blog",
+      description: "TODO",
     },
   },
-  head: [["meta", { name: "referrer", content: "no-referrer-when-downgrade" }]],
   alias: {
     "@MyLink": path.resolve(__dirname, "./components/Mylink.vue"),
     "@MyCoverLink": path.resolve(__dirname, "./components/MyCoverLink.vue"),
     "@Design": path.resolve(__dirname, "./data/design.ts"),
     "@Api": path.resolve(__dirname, "./data/api.ts"),
-    "@theme-hope/modules/blog/components/BlogHero": path.resolve(
-      __dirname,
-      "./components/BlogHero.vue",
-    ),
   },
 
   theme: theme,
 
-  port: 8080,
+  port: 9527,
 
   bundler: viteBundler({
     viteOptions: {
@@ -57,7 +50,7 @@ export default defineUserConfig({
             rewrite: (path) => path.replace(/^\/bing/, ""),
           },
         },
-      },
+      }
     },
     // vuePluginOptions: {},
   }),
@@ -105,6 +98,55 @@ export default defineUserConfig({
       // 配置项
       id: "G-R1WPVQFH8L",
       debug: true,
+    }),
+    // 搜索插件
+    docsearchPlugin({
+      appId: "PI9QTF572N",
+      apiKey: "07e2432555d8ecdd3fb72978f0a05cdc",
+      indexName: "oragekk",
+      locales: {
+        "/": {
+          placeholder: "搜索内容",
+          translations: {
+            button: {
+              buttonText: "搜索",
+              buttonAriaLabel: "搜索",
+            },
+            modal: {
+              searchBox: {
+                resetButtonTitle: "清除查询条件",
+                resetButtonAriaLabel: "清除查询条件",
+                cancelButtonText: "取消",
+                cancelButtonAriaLabel: "取消",
+              },
+              startScreen: {
+                recentSearchesTitle: "搜索历史",
+                noRecentSearchesText: "没有搜索历史",
+                saveRecentSearchButtonTitle: "保存至搜索历史",
+                removeRecentSearchButtonTitle: "从搜索历史中移除",
+                favoriteSearchesTitle: "收藏",
+                removeFavoriteSearchButtonTitle: "从收藏中移除",
+              },
+              errorScreen: {
+                titleText: "无法获取结果",
+                helpText: "你可能需要检查你的网络连接",
+              },
+              footer: {
+                selectText: "选择",
+                navigateText: "切换",
+                closeText: "关闭",
+                searchByText: "搜索提供者",
+              },
+              noResultsScreen: {
+                noResultsText: "无法找到相关结果",
+                suggestedQueryText: "你可以尝试查询",
+                reportMissingResultsText: "你认为该查询应该有结果？",
+                reportMissingResultsLinkText: "点击反馈",
+              },
+            },
+          },
+        },
+      },
     }),
     // 看板娘插件
     // ohmylive2dPlugin({

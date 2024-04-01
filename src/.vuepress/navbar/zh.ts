@@ -1,52 +1,69 @@
 import { navbar } from "vuepress-theme-hope";
 
 export const zhNavbar = navbar([
-  "/zh/",
-  "/zh/demo/",
+  "/",
+  { text: "导航", icon: "discover", link: "/demo/" },
   {
-    text: "博文",
-    icon: "pen-to-square",
-    prefix: "/zh/posts/",
+    text: "笔记分类",
+    icon: "edit",
     children: [
       {
-        text: "苹果",
-        icon: "pen-to-square",
-        prefix: "apple/",
+        text: "代码笔记",
+        prefix:"/posts/",
         children: [
-          { text: "苹果1", icon: "pen-to-square", link: "1" },
-          { text: "苹果2", icon: "pen-to-square", link: "2" },
-          "3",
-          "4",
+          { text: "iOS笔记", icon: "hk-apple", link: "iOS/" },
+          { text: "前端笔记", icon: "code", link: "Web/" },
+          { text: "Linux", icon: "linux", link: "Linux/" },
+          { text: "Python", icon: "python", link: "Python/" },
+          { text: "Rust", icon: "hk-rust", link: "Rust/" },
+          { text: "React", icon: "react", link: "cross-platform/ReactNative/" },
+          {
+            text: "Flutter",
+            icon: "hk-flutter",
+            link: "cross-platform/Flutter/",
+          },
         ],
       },
       {
-        text: "香蕉",
-        icon: "pen-to-square",
-        prefix: "banana/",
+        text: "博客相关",
+        prefix:"/blog/",
         children: [
-          {
-            text: "香蕉 1",
-            icon: "pen-to-square",
-            link: "1",
-          },
-          {
-            text: "香蕉 2",
-            icon: "pen-to-square",
-            link: "2",
-          },
-          "3",
-          "4",
+          { text: "博客相关", icon: "blog", link: "" },
         ],
       },
-      { text: "樱桃", icon: "pen-to-square", link: "cherry" },
-      { text: "火龙果", icon: "pen-to-square", link: "dragonfruit" },
-      "tomato",
-      "strawberry",
     ],
   },
   {
-    text: "V2 文档",
-    icon: "book",
-    link: "https://theme-hope.vuejs.press/zh/",
+    text: "软件教程",
+    icon: "software",
+    link: "/tutorial/",
+  },
+  {
+    text: "收藏",
+    icon: "hk-shoucang1",
+    link: "/collect",
+  },
+  {
+    text: "说说",
+    icon: "news",
+    link: "/news/",
+  },
+  {
+    text: "留言板",
+    icon: "mark",
+    link: "/visitorsbook",
+  },
+  {
+    text: "友链",
+    icon: "link",
+    link: "/friend",
+  },
+  {
+    text: "关于",
+    icon: "info",
+    children:[
+      { text: "关于我", icon: "people", link: "/intro" },
+      { text: "关于本站", icon: "info", link: "/about" },
+    ]
   },
 ]);

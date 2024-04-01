@@ -1,6 +1,7 @@
 {
-  "name": "salvely",
-  "description": "Wen Gao's Blog",
+  "name": "TODO",
+  "version": "2.6.2",
+  "description": "TODO的博客",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -13,25 +14,23 @@
     "@vue/repl": "^4.1.1",
     "@vuepress/bundler-vite": "2.0.0-rc.8",
     "@vuepress/plugin-blog": "2.0.0-rc.17",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.17",
     "@vuepress/plugin-feed": "2.0.0-rc.17",
     "@vuepress/plugin-google-analytics": "2.0.0-rc.15",
-    "@vuepress/plugin-pwa": "2.0.0-rc.17",
     "@vuepress/plugin-shiki": "2.0.0-rc.17",
+    "@vuepress/plugin-pwa": "2.0.0-rc.17",
     "@waline/client": "^3.1.2",
     "chart.js": "^4.4.1",
     "echarts": "^5.5.0",
     "flowchart.ts": "^2.0.0",
-    "hitokoto": "^0.0.3",
     "katex": "^0.16.9",
     "mermaid": "^10.8.0",
     "reveal.js": "^5.0.4",
-    "vite-plugin-import": "^0.4.0",
     "vue": "^3.4.19",
     "vue-router": "^4.3.0",
     "vuepress": "2.0.0-rc.8",
     "vuepress-plugin-comment2": "2.0.0-rc.25",
     "vuepress-plugin-meting2": "1.4.1",
-    "vuepress-plugin-search-pro": "2.0.0-rc.32",
     "vuepress-shared": "2.0.0-rc.25",
     "vuepress-theme-hope": "2.0.0-rc.25"
   },
@@ -45,7 +44,7 @@
     "http-proxy-middleware": "^2.0.6",
     "vuepress-plugin-oh-my-live2d": "0.6.0"
   },
-  "packageManager": "pnpm@8.15.5",
+  "packageManager": "pnpm@8.15.3",
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [

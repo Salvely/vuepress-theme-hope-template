@@ -2,9 +2,9 @@
 home: true
 layout: BlogHome
 icon: home
-title: Home Page
+title: 主页
 heroImage: /logo.svg
-heroText: Salvely's Blog
+heroText: <Todo>'s Blog
 bgImage: "/assets/home_bg3.jpg"
 heroFullScreen: true
 tagline: Goals determine what you are going to be. —— Julius Erving
@@ -12,7 +12,7 @@ description: 「一生短暂，过程很美」 致力于分享自己涉及和了
 head:
   - - meta
     - name: keywords
-      content: oragekk, 上冬十二, Oragekk Blog, 博客, 个人博客, 极客, geek, 大前端, 设计, iOS, Flutter, Vue
+      content: <Todo>
 projects:
   - icon: /logo.svg
     name: 关于本站
@@ -46,9 +46,3 @@ projects:
 
 footer: <div><span>Powered by <a href="https://v2.vuepress.vuejs.org/zh/" target="_blank">VuePress</a></span>|<span>Theme by <a href="https://theme-hope.vuejs.press/zh/" target="_blank">Hope</a></span></div>
 ---
-
-This is a blog home page demo.
-
-To use this layout, you should set both `layout: BlogHome` and `home: true` in the page front matter.
-
-For related configuration docs, please see [blog homepage](https://theme-hope.vuejs.press/guide/blog/home/).

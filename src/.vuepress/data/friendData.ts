@@ -7,10 +7,10 @@ export interface LinkData {
 
 export const friends: LinkData[] = [
   {
-    name: "上冬十二",
+    name: "TODO",
     desc: "到最后，竟庆幸于夕阳仍留在身上",
     icon: "/logo.svg",
-    link: "https://salvely.github.io/",
+    link: "https://oragekk.me/",
   },
   {
     name: "廿壴(GANXB2)博客",
