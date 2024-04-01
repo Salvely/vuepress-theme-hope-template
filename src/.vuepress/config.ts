@@ -34,6 +34,10 @@ export default defineUserConfig({
     "@MyCoverLink": path.resolve(__dirname, "./components/MyCoverLink.vue"),
     "@Design": path.resolve(__dirname, "./data/design.ts"),
     "@Api": path.resolve(__dirname, "./data/api.ts"),
+    "@theme-hope/modules/blog/components/BlogHero": path.resolve(
+      __dirname,
+      "./components/BlogHero.vue"
+    ),
   },
 
   theme: theme,
