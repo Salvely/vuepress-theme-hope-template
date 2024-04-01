@@ -1,19 +1,58 @@
 {
-  "name": "wengao-blog",
-  "version": "2.0.0",
+  "name": "salvely",
   "description": "Wen Gao's Blog",
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "docs:build": "vuepress-vite build src",
-    "docs:clean-dev": "vuepress-vite dev src --clean-cache",
-    "docs:dev": "vuepress-vite dev src",
-    "docs:update-package": "pnpm dlx vp-update"
+    "build": "vuepress-vite build src",
+    "clean-dev": "vuepress-vite dev src --clean-cache",
+    "dev": "vuepress-vite dev src",
+    "update-package": "pnpm dlx vp-update"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.9",
-    "vue": "^3.4.21",
-    "vuepress": "2.0.0-rc.9",
-    "vuepress-theme-hope": "2.0.0-rc.32"
+    "@vue/repl": "^4.1.1",
+    "@vuepress/bundler-vite": "2.0.0-rc.8",
+    "@vuepress/plugin-blog": "2.0.0-rc.17",
+    "@vuepress/plugin-feed": "2.0.0-rc.17",
+    "@vuepress/plugin-google-analytics": "2.0.0-rc.15",
+    "@vuepress/plugin-pwa": "2.0.0-rc.17",
+    "@vuepress/plugin-shiki": "2.0.0-rc.17",
+    "@waline/client": "^3.1.2",
+    "chart.js": "^4.4.1",
+    "echarts": "^5.5.0",
+    "flowchart.ts": "^2.0.0",
+    "hitokoto": "^0.0.3",
+    "katex": "^0.16.9",
+    "mermaid": "^10.8.0",
+    "reveal.js": "^5.0.4",
+    "vite-plugin-import": "^0.4.0",
+    "vue": "^3.4.19",
+    "vue-router": "^4.3.0",
+    "vuepress": "2.0.0-rc.8",
+    "vuepress-plugin-comment2": "2.0.0-rc.25",
+    "vuepress-plugin-meting2": "1.4.1",
+    "vuepress-plugin-search-pro": "2.0.0-rc.32",
+    "vuepress-shared": "2.0.0-rc.25",
+    "vuepress-theme-hope": "2.0.0-rc.25"
+  },
+  "dependencies": {
+    "@moefy-canvas/core": "^0.5.2",
+    "@moefy-canvas/theme-popper": "^0.5.2",
+    "aplayer": "^1.10.1",
+    "axios": "^1.6.7",
+    "deepmerge-ts": "^5.1.0",
+    "hls.js": "^1.5.6",
+    "http-proxy-middleware": "^2.0.6",
+    "vuepress-plugin-oh-my-live2d": "0.6.0"
+  },
+  "packageManager": "pnpm@8.15.5",
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@types/react",
+        "react",
+        "react-dom"
+      ]
+    }
   }
 }
